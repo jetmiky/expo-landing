@@ -2,6 +2,7 @@ const gulp = require("gulp");
 const clean = require("gulp-clean");
 const uglifyJS = require("gulp-uglify");
 const uglifyCSS = require("gulp-clean-css");
+const purgecss = require("gulp-purgecss");
 const uglifyHTML = require("gulp-htmlmin");
 const inject = require("gulp-inject");
 const rename = require("gulp-rename");
@@ -29,7 +30,12 @@ function minifyCSS() {
   const timestamp = generateTimestamp();
 
   return gulp
-    .src("css/main.css")
+    .src("css/**/*.css")
+    .pipe(
+      purgecss({
+        content: ["**/*.html"],
+      })
+    )
     .pipe(uglifyCSS())
     .pipe(rename({ extname: `.${timestamp}.min.css` }))
     .pipe(gulp.dest("build/css/"));
@@ -41,10 +47,6 @@ function moveAssets() {
 
 function moveVendorJS() {
   return gulp.src("js/*.min.js").pipe(gulp.dest("build/js"));
-}
-
-function moveVendorCSS() {
-  return gulp.src("css/*.min.css").pipe(gulp.dest("build/css"));
 }
 
 function moveHTML() {
@@ -80,7 +82,6 @@ exports.default = gulp.series(
   cleanBuild,
   moveAssets,
   moveVendorJS,
-  moveVendorCSS,
   minifyCSS,
   minifyJS,
   moveHTML,
