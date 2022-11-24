@@ -36,7 +36,7 @@ function minifyCSS() {
 }
 
 function moveAssets() {
-  return gulp.src(["assets/**/*.*", "sitemap.xml"]).pipe(gulp.dest("build/"));
+  return gulp.src(["assets/**/*.*"]).pipe(gulp.dest("build/assets"));
 }
 
 function moveVendorJS() {
