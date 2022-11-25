@@ -78,6 +78,14 @@ body {
   width: 90%;
 }
 
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .actions {
   margin: 2rem 0;
 }
