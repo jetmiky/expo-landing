@@ -74,6 +74,17 @@ body {
   margin-bottom: 3.75rem;
 }
 
+.logo img {
+  transition: all 0.35s ease;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+.logo img:hover {
+  filter: none;
+  -webkit-filter: grayscale(0);
+}
+
 .main-paragraph {
   width: 90%;
 }
