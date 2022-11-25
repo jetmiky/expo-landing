@@ -5,6 +5,7 @@ const uglifyCSS = require("gulp-clean-css");
 const purgecss = require("gulp-purgecss");
 const uglifyHTML = require("gulp-htmlmin");
 const inject = require("gulp-inject");
+const injectString = require("gulp-inject-string");
 const rename = require("gulp-rename");
 
 function generateTimestamp() {
@@ -53,6 +54,20 @@ function moveHTML() {
   return gulp.src("*.html").pipe(gulp.dest("build/"));
 }
 
+function injectFonts() {
+  return gulp
+    .src("build/*.html")
+    .pipe(
+      injectString.after(
+        "<!-- inject:fonts -->",
+        `<link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />`
+      )
+    )
+    .pipe(gulp.dest("build/"));
+}
+
 function injectHTMLAssets() {
   const sources = gulp.src(["build/js/*.js", "build/css/*.css"]);
   const options = { addRootSlash: false, ignorePath: "build/" };
@@ -86,5 +101,6 @@ exports.default = gulp.series(
   minifyJS,
   moveHTML,
   injectHTMLAssets,
+  injectFonts,
   minifyHTML
 );
