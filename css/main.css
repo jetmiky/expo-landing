@@ -78,6 +78,17 @@ body {
   width: 90%;
 }
 
+.actions {
+  margin: 2rem 0;
+}
+
+.actions p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 0 0 0.5rem;
+  text-align: left;
+}
+
 .social-btns .btn,
 .social-btns .btn:before,
 .social-btns .btn .fa {
@@ -101,6 +112,9 @@ body {
     #285aeb 90%
   );
 }
+.social-btns .btn.instagram {
+  margin-right: 0.5rem;
+}
 .social-btns .btn.instagram .fa {
   color: #0e2f4c;
 }
@@ -123,7 +137,7 @@ body {
 }
 .social-btns {
   height: 3rem;
-  margin: 2rem auto 0;
+  margin-right: 2rem;
   font-size: 0;
   text-align: center;
 }
@@ -133,13 +147,11 @@ body {
   width: 3rem;
   height: 3rem;
   line-height: 3rem;
-  margin: 0 0.25rem;
   text-align: center;
   position: relative;
   overflow: hidden;
   border-radius: 28%;
   box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
-  opacity: 0.99;
 }
 .social-btns .btn:before {
   content: "";
@@ -151,6 +163,20 @@ body {
 .social-btns .btn .fa {
   font-size: 1.8rem;
   vertical-align: middle;
+}
+
+.btn.certificate {
+  display: inline-block;
+  background-color: #fff;
+  padding: 0 1.5rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
 }
 
 @media (min-width: 640px) {
