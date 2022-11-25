@@ -20,6 +20,7 @@ body {
 
 .h1 {
   font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .regular {
@@ -54,18 +55,36 @@ body {
   justify-content: center;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .container {
-  width: 100%;
+  max-width: 100%;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .logo {
   height: 6rem;
-  text-align: center;
+  margin-bottom: 3.75rem;
+}
+
+.main-paragraph {
+  width: 90%;
 }
 
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
+  }
+
+  .main-paragraph {
+    width: 80%;
   }
 }
 
@@ -73,16 +92,28 @@ body {
   .container {
     max-width: 768px;
   }
+
+  .main-paragraph {
+    width: 75%;
+  }
 }
 
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
   }
+
+  .main-paragraph {
+    width: 65%;
+  }
 }
 
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
+  }
+
+  .main-paragraph {
+    width: 50%;
   }
 }
