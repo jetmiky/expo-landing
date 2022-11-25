@@ -19,8 +19,8 @@ body {
 }
 
 .h1 {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+  font-size: 1.75rem;
+  line-height: 2rem;
 }
 
 .regular {
@@ -70,7 +70,7 @@ body {
 }
 
 .logo {
-  height: 6rem;
+  height: 4.5rem;
   margin-bottom: 3.75rem;
 }
 
@@ -200,6 +200,15 @@ body {
 
   .main-paragraph {
     width: 75%;
+  }
+
+  .logo {
+    height: 6rem;
+  }
+
+  .h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 
