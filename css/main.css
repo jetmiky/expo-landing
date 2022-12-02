@@ -194,6 +194,7 @@ body {
 }
 
 .btn.certificate {
+  color: #0e2f4c;
   transition-timing-function: ease-in-out;
 }
 
