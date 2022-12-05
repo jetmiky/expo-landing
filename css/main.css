@@ -194,6 +194,8 @@ body {
 .btn.certificate {
   color: #0e2f4c;
   transition-timing-function: ease-in-out;
+  line-height: 1.25rem;
+  padding: 1rem 1.25rem;
 }
 
 .btn.certificate:hover {
