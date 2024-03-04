@@ -24,5 +24,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jetmiky/expo-landing.git"
+  },
+  "dependencies": {
+    "@jetmiky/rupiahjs": "^1.0.6"
   }
 }
